@@ -2,8 +2,8 @@ import axios from "axios";
 
 export const getApodList = async () => {
   try {
-    const response = await axios.get("../data/apodList.ts");
-    console.log(response);
+    const res = await axios.get("/sample.json");
+    return res.data;
   } catch (error) {
     console.error(error);
   }
