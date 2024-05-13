@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { IApodList } from "../../types/types";
+import ReactPlayer from "react-player/lazy";
 
 const ModalContainer = styled(motion.div)`
   position: fixed;
@@ -14,7 +15,7 @@ const ModalContentWrap = styled(motion.div)`
   max-height: 500px;
   min-height: 500px;
   height: 500px;
-  background-color: #111111;
+  background-color: #8b8b8b;
   border-radius: 10px;
   padding: 40px 30px;
 `;
@@ -83,7 +84,12 @@ const ModalCard = ({
               ease: "easeInOut",
             }}
           >
-            <Img src={selectedApod.url} alt={selectedApod.title} />
+            {selectedApod.media_type === "image" && (
+              <Img src={selectedApod.url} alt={selectedApod.title} />
+            )}
+            {selectedApod.media_type === "video" && (
+              <ReactPlayer url={selectedApod.url} />
+            )}
             <TextWrap>
               <ApodTitle>{selectedApod.title}</ApodTitle>
               <p>{selectedApod.date}</p>

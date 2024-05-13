@@ -1,6 +1,5 @@
 import { IApodList } from "../../types/types";
 import { motion } from "framer-motion";
-
 import styled from "@emotion/styled";
 
 const ApodListContainer = styled.div`
@@ -43,7 +42,11 @@ const ApodContList = ({
             layoutId={apod.date}
           >
             <ImgWrap>
-              <Img src={apod.url} alt={apod.title} />
+              {apod.media_type === "image" && (
+                <Img src={apod.url} alt={apod.title} />
+              )}
+              {apod.media_type === "video" && <p>이 card는 video입니다.</p>}
+              {apod.media_type === "other" && <p>이 card는 other입니다.</p>}
             </ImgWrap>
           </ApodInfoCard>
         </div>

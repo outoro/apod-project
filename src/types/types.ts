@@ -6,5 +6,5 @@ export interface IApodList {
   media_type: string;
   service_version: string;
   title: string;
-  url: string;
+  url?: string;
 }
