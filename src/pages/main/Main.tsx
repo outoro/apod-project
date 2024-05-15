@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import ApodAnimGroup from "../../components/apod/ApodAnimGroup";
+import ApodContList from "components/apod/ApodContList";
 
 const MainContainer = styled.main`
   max-width: 1200px;
@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <MainContainer>
       <ContainerTitle>Astronomy Picture of the Day Archive</ContainerTitle>
-      <ApodAnimGroup />
+      <ApodContList />
     </MainContainer>
   );
 };

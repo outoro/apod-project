@@ -14,7 +14,7 @@ const ApodAnimGroup = () => {
       <AnimatePresence>
         {isLoading && <p>Loading...</p>}
         {error && <p>🆘 error !</p>}
-        {data && <ApodContList setSelectedId={setSelectedId} data={data} />}
+        {data && <ApodContList />}
         {selectedId !== undefined && (
           <ModalOverlay setSelectedId={setSelectedId} />
         )}

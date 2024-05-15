@@ -1358,16 +1358,6 @@
     "url": "https://apod.nasa.gov/apod/image/0110/huygenspara_esa.jpg"
   },
   {
-    "copyright": "\nPetr Hor�lek;\n Rollover Annotation:  Judy Schmidt\n",
-    "date": "2015-10-14",
-    "explanation": "Is there anything interesting to see in the direction opposite the Sun? One night last month, there were quite a few things. First, the red-glowing orb on the lower right of the featured image is the full moon, darkened and reddened because it has entered Earth's shadow. Beyond Earth's cone of darkness are backscattering dust particles orbiting the Sun that standout with a diffuse glow called the gegenschein, visible as a faint band rising from the central horizon and passing behind the Moon. A nearly horizontal stripe of green airglow is also discernable just above the horizon, partly blocked by blowing orange sand.  Visible in the distant sky as the blue dot near the top of the image is the star Sirius, while the central band of our Milky Way Galaxy arches up on the image left and down again on the right. The fuzzy light patches just left of center are the Large and Small Magellanic Clouds. Red emission nebulas too numerous to mention are scattered about the sky, but are labelled in a companion annotated image.  In the image foreground is the desolate Deadvlei region of the Namib-Naukluft National Park in Namibia, featuring the astrophotographer himself surveying a land and sky so amazing that he described it as one of the top experiences of his life.    Quiz: Astronomy Picture of the Day Caption or Harlequin Novel?",
-    "hdurl": "https://apod.nasa.gov/apod/image/1510/GegenscheinEclipse_Horalek_1500.jpg",
-    "media_type": "image",
-    "service_version": "v1",
-    "title": "A Gegenschein Lunar Eclipse",
-    "url": "https://apod.nasa.gov/apod/image/1510/GegenscheinEclipse_Horalek_1080.jpg"
-  },
-  {
     "copyright": "\nNicolas Lefaudeux\n",
     "date": "2021-03-08",
     "explanation": "What created the unusual red tail in Comet NEOWISE? Sodium.  A spectacular sight back in the summer of 2020, Comet NEOWISE, at times, displayed something more than just a surprisingly striated white dust tail and a pleasingly patchy blue ion tail. Some color sensitive images showed an unusual red tail, and analysis showed much of this third tail's color was emitted by sodium.  Gas rich in sodium atoms might have been liberated from Comet NEOWISE's warming nucleus in early July by bright sunlight, electrically charged by ultraviolet sunlight, and then pushed out by the solar wind. The featured image was captured in mid-July from Brittany, France and shows the real colors. Sodium comet tails have been seen before but are rare -- this one disappeared by late July.  Comet C/2020 F3 (NEOWISE) has since faded, lost all of its bright tails, and now approaches the orbit of Jupiter as it heads back to the outer Solar System, to return only in about 7,000 years.    Astrophysicists: Browse 2,400+ codes in the Astrophysics Source Code Library",
@@ -1472,16 +1462,7 @@
     "title": "The Asymmetric Nebula Surrounding Wolf-Rayet Star 18",
     "url": "https://apod.nasa.gov/apod/image/2211/wr18_woronow_960.jpg"
   },
-  {
-    "copyright": "\nMark Meyer (Photo-Mark.com)\n",
-    "date": "2003-03-26",
-    "explanation": "Is that a cloud or a flying saucer?  Both, although it is surely not an alien spacecraft.  Lenticular clouds can be shaped like a saucer, and can fly in the sense that, like most clouds, they are composed of small water droplets that float on air.  Lenticular clouds are typically formed by high winds over rugged terrain and are particularly apparent when few other clouds are in the sky.  Lenticular clouds can take on particularly strange, layered shapes.  Above, a couple stopped their car near Yellowstone National Park in Wyoming, USA to photograph this lenticular cloud behind picturesque windmills.",
-    "hdurl": "https://apod.nasa.gov/apod/image/0303/lenticular_meyer_big.jpg",
-    "media_type": "image",
-    "service_version": "v1",
-    "title": "A Lenticular Cloud Over Wyoming",
-    "url": "https://apod.nasa.gov/apod/image/0303/lenticular_meyer.jpg"
-  },
+
   {
     "copyright": "CARA Project",
     "date": "2020-03-21",
@@ -2269,14 +2250,6 @@
     "service_version": "v1",
     "title": "NGC 4449: Close-Up of a Small Galaxy",
     "url": "https://apod.nasa.gov/apod/image/0707/ngc4449_hst_c720.jpg"
-  },
-  {
-    "date": "2021-07-13",
-    "explanation": "What has happened to Saturn's moon Iapetus?  Vast sections of this strange world are dark brown,  while others are as bright white.  The composition of the dark material is unknown, but infrared spectra indicate that it possibly contains some dark form of carbon. Iapetus also has an unusual equatorial ridge that makes it appear like a walnut.  To help better understand this seemingly painted moon, NASA directed the robotic Cassini spacecraft orbiting Saturn to swoop within 2,000 kilometers in 2007. Iapetus is pictured here in 3D.  A huge impact crater seen in the south spans a tremendous 450 kilometers and appears superposed on an older crater of similar size. The dark material is seen increasingly coating the easternmost part of Iapetus, darkening craters and highlands alike.  Close inspection indicates that the dark coating typically faces the moon's equator and is less than a meter thick. A leading hypothesis is that the dark material is mostly dirt leftover when relatively warm but dirty ice sublimates. An initial coating of dark material may have been effectively painted on by the accretion of meteor-liberated debris from other moons.",
-    "media_type": "video",
-    "service_version": "v1",
-    "title": "Saturn's Iapetus: Painted Moon in 3D",
-    "url": "https://solarsystem.nasa.gov/gltf_embed/2381"
   },
   {
     "date": "2010-07-03",

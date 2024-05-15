@@ -1,45 +1,42 @@
 import { IApodList } from "../../types/types";
-import { motion } from "framer-motion";
+import { useApodList } from "hooks/useApodList";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 const ApodListContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 50px 0;
 `;
 
-const ApodInfoCard = styled(motion.div)`
+const ApodInfoCard = styled.div`
   text-align: center;
 `;
 
-const ImgWrap = styled(motion.div)`
+const ImgWrap = styled.div`
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
 `;
 
-const Img = styled(motion.img)`
+const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 `;
 
-const ApodContList = ({
-  setSelectedId,
-  data,
-}: {
-  setSelectedId: React.Dispatch<React.SetStateAction<string | undefined>>;
-  data: IApodList[];
-}) => {
+const ApodContList = () => {
+  const { data, isLoading, error } = useApodList();
+  const navigate = useNavigate();
+
   return (
     <ApodListContainer>
-      {data.map((apod, index) => (
-        <div key={index}>
+      {data &&
+        data.map((apod: IApodList) => (
           <ApodInfoCard
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            whileHover={{ scale: 0.95 }}
-            onClick={() => setSelectedId(apod.date)}
-            layoutId={apod.date}
+            key={apod.date}
+            onClick={() => navigate(`/${apod.date}`)}
           >
             <ImgWrap>
               {apod.media_type === "image" && (
@@ -49,8 +46,7 @@ const ApodContList = ({
               {apod.media_type === "other" && <p>이 card는 other입니다.</p>}
             </ImgWrap>
           </ApodInfoCard>
-        </div>
-      ))}
+        ))}
     </ApodListContainer>
   );
 };

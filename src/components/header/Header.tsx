@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import logoImg from "assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   max-width: 1200px;
@@ -14,7 +15,9 @@ const LogoImg = styled.img`
 const Header = () => {
   return (
     <HeaderContainer>
-      <LogoImg src={logoImg} alt="" />
+      <Link to="/">
+        <LogoImg src={logoImg} alt="" />
+      </Link>
     </HeaderContainer>
   );
 };
