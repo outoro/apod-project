@@ -32,16 +32,29 @@ const ApodDetail = () => {
   const { pathname } = useLocation();
   const selectedApod =
     data && data.find((apod: IApodList) => apod.date === pathname.slice(1));
+
+  if (!selectedApod) {
+    return <p>APOD not found</p>;
+  }
   const { date, title, explanation, media_type, url } = selectedApod;
 
   return (
-    <DetailContainer>
-      <ApodDate>{date}</ApodDate>
-      <ApodTitle>{title}</ApodTitle>
-      <ApodDes>{explanation}</ApodDes>
-      {media_type === "video" && <ReactPlayer url={url} width="100%" />}
-      <Img src={url} alt={title} />
-    </DetailContainer>
+    selectedApod && (
+      <DetailContainer>
+        <ApodDate>{date}</ApodDate>
+        <ApodTitle>{title}</ApodTitle>
+        <ApodDes>{explanation}</ApodDes>
+        {media_type === "video" ? (
+          <ReactPlayer url={url} width="100%" />
+        ) : (
+          <Img src={url} alt={title} />
+        )}
+        <div>
+          <button>Prev</button>
+          <button>Next</button>
+        </div>
+      </DetailContainer>
+    )
   );
 };
 

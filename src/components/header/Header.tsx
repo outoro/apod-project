@@ -6,6 +6,9 @@ const HeaderContainer = styled.header`
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const LogoImg = styled.img`
@@ -18,6 +21,8 @@ const Header = () => {
       <Link to="/">
         <LogoImg src={logoImg} alt="" />
       </Link>
+
+      <button>global</button>
     </HeaderContainer>
   );
 };
