@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import ApodContList from "components/apod/ApodContList";
 import ApodList from "components/apod/ApodList";
 
 const MainContainer = styled.main`
@@ -17,7 +16,6 @@ const Main = () => {
   return (
     <MainContainer>
       <ContainerTitle>Astronomy Picture of the Day Archive</ContainerTitle>
-      {/* <ApodContList /> */}
       <ApodList />
     </MainContainer>
   );
