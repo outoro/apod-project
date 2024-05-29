@@ -22,7 +22,7 @@ const Header = () => {
         <LogoImg src={logoImg} alt="" />
       </Link>
 
-      <button>global</button>
+      <button>search</button>
     </HeaderContainer>
   );
 };

@@ -7,4 +7,5 @@ export interface IApodList {
   service_version: string;
   title: string;
   url?: string;
+  thumbnail_url?: string;
 }

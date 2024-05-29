@@ -42,7 +42,9 @@ const ApodContList = () => {
               {apod.media_type === "image" && (
                 <Img src={apod.url} alt={apod.title} />
               )}
-              {apod.media_type === "video" && <p>이 card는 video입니다.</p>}
+              {apod.media_type === "video" && (
+                <Img src={apod.thumbnail_url} alt={apod.title} />
+              )}
               {apod.media_type === "other" && <p>이 card는 other입니다.</p>}
             </ImgWrap>
           </ApodInfoCard>
