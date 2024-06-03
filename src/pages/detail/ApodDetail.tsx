@@ -1,8 +1,10 @@
-import { useApodList } from "hooks/useApodList";
-import { useLocation } from "react-router-dom";
-import { IApodList } from "types/types";
 import styled from "@emotion/styled";
+import axios from "axios";
 import ReactPlayer from "react-player";
+
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { IApodType } from "types/types";
 
 const DetailContainer = styled.div`
   max-width: 1000px;
@@ -28,33 +30,41 @@ const Img = styled.img`
 `;
 
 const ApodDetail = () => {
-  const { data } = useApodList();
-  const { pathname } = useLocation();
-  const selectedApod =
-    data && data.find((apod: IApodList) => apod.date === pathname.slice(1));
+  const { id } = useParams();
+  const [apodInfo, setApodInfo] = useState<IApodType>();
 
-  if (!selectedApod) {
-    return <p>APOD not found</p>;
-  }
-  const { date, title, explanation, media_type, url } = selectedApod;
+  useEffect(() => {
+    const getApodInfo = async () => {
+      try {
+        const res = await axios(
+          `https://api.nasa.gov/planetary/apod?api_key=82NR8O1qhfFCbLOPfYPKluKpXSf8Il3Fzv59MWlB&date=${id}`
+        );
+        setApodInfo(res.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    getApodInfo();
+  }, [id]);
+
+  if (!apodInfo) return <p>No ApodInfo</p>;
 
   return (
-    selectedApod && (
-      <DetailContainer>
-        <ApodDate>{date}</ApodDate>
-        <ApodTitle>{title}</ApodTitle>
-        <ApodDes>{explanation}</ApodDes>
-        {media_type === "video" ? (
-          <ReactPlayer url={url} width="100%" />
-        ) : (
-          <Img src={url} alt={title} />
-        )}
-        <div>
-          <button>Prev</button>
-          <button>Next</button>
-        </div>
-      </DetailContainer>
-    )
+    <DetailContainer>
+      <ApodDate>{apodInfo.date}</ApodDate>
+      <ApodTitle>{apodInfo.title}</ApodTitle>
+      <ApodDes>{apodInfo.explanation}</ApodDes>
+      {apodInfo.media_type === "video" ? (
+        <ReactPlayer url={apodInfo.url} width="100%" />
+      ) : (
+        <Img src={apodInfo.url} alt={apodInfo.title} />
+      )}
+      <div>
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
+    </DetailContainer>
   );
 };
 

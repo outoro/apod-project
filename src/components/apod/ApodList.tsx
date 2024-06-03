@@ -1,5 +1,5 @@
 import useApodListQuery from "hooks/useApodListQuery";
-import { IApodList } from "../../types/types";
+import { IApodType } from "../../types/types";
 import styled from "@emotion/styled";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -56,7 +56,7 @@ const ApodList = () => {
     <Container>
       {data?.pages.map((page, index) => (
         <ApodListContainer key={index}>
-          {page.map((apod: IApodList, index: number) => (
+          {page.map((apod: IApodType, index: number) => (
             <ApodInfoCard key={index} onClick={() => navigate(`/${apod.date}`)}>
               <ImgWrap>
                 {apod.media_type === "image" && (

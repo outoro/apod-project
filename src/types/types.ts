@@ -1,4 +1,4 @@
-export interface IApodList {
+export interface IApodType {
   copyright?: string;
   date: string;
   explanation: string;
